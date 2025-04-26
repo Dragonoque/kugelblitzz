@@ -4,38 +4,35 @@ import os
 from io import BytesIO
 st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 st.title("🌌 Kugelblitz Physics Club")
-... 
-... # Simple password protection
-... PASSWORD = "kugelblitz123"  # <-- Change this to a secure password
-... 
-... # Data storage (for simple use, in-memory; can be adapted to file/database)
-... if 'club_data' not in st.session_state:
-...     st.session_state.club_data = pd.DataFrame(columns=[
-...         "Name", "Batch", "Course", "Phone", "Email", "Position", "Picture"
-...     ])
-... 
-... # Function to upload and store image
-... def save_image(uploaded_file):
-...     return uploaded_file.getvalue()
-... 
-... # Sidebar form with password
-... with st.sidebar:
-...     st.header("🔒 Admin Access")
-...     password = st.text_input("Enter password", type="password")
-...     
-...     if password == PASSWORD:
-...         st.success("Access granted")
-...         
-...         with st.form("club_member_form", clear_on_submit=True):
-...             name = st.text_input("Name")
-...             batch = st.text_input("Batch")
-...             course = st.text_input("Course")
-...             phone = st.text_input("Phone Number")
-...             email = st.text_input("Email")
-...             position = st.selectbox("Position in Club", ["President", "Vice President", "Core Team", "Member", "Other"])
-...             picture = st.file_uploader("Upload Picture", type=["jpg", "jpeg", "png"])
-...             
-...             submitted = st.form_submit_button("Submit / Update Entry")
+PASSWORD = "kugelblitz123"  # <-- Change this to a secure password
+ 
+# Data storage (for simple use, in-memory; can be adapted to file/database)
+if 'club_data' not in st.session_state:
+     st.session_state.club_data = pd.DataFrame(columns=[
+         "Name", "Batch", "Course", "Phone", "Email", "Position", "Picture"]))
+ 
+ # Function to upload and store image
+ def save_image(uploaded_file):
+     return uploaded_file.getvalue()
+ 
+ # Sidebar form with password
+ with st.sidebar:
+     st.header("🔒 Admin Access")
+     password = st.text_input("Enter password", type="password")
+     
+     if password == PASSWORD:
+         st.success("Access granted")
+         
+         with st.form("club_member_form", clear_on_submit=True):
+             name = st.text_input("Name")
+             batch = st.text_input("Batch")
+             course = st.text_input("Course")
+             phone = st.text_input("Phone Number")
+             email = st.text_input("Email")
+             position = st.selectbox("Position in Club", ["President", "Vice President", "Core Team", "Member", "Other"])
+             picture = st.file_uploader("Upload Picture", type=["jpg", "jpeg", "png"])
+             
+             submitted = st.form_submit_button("Submit / Update Entry")
             
             if submitted:
                 if name and batch and course and phone and email and position and picture:
