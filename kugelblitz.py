@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import os
 from io import BytesIO
-from PIL import Image
-st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 
+st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
+st.image("https://live.staticflickr.com/65535/52211883534_f45cb76810.jpg", caption="A Kugelblitz is a theoretical, highly dense concentration of energy, specifically light or heat, that collapses into a black hole due to the warping of spacetime. It's a black hole formed not from matter, but from intensely focused energy, potentially created by a powerful laser pulse. ", use_column_width=True)
 
 # Configurations
 
