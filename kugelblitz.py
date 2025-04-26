@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from io import BytesIO
-]st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
+st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 st.title("🌌 Kugelblitz Physics Club")
 ... 
 ... # Simple password protection
