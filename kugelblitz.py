@@ -9,7 +9,7 @@ PASSWORD = "kugelblitz123"  # <-- Change this to a secure password
 # Data storage (for simple use, in-memory; can be adapted to file/database)
 if 'club_data' not in st.session_state:
      st.session_state.club_data = pd.DataFrame(columns=[
-         "Name", "Batch", "Course", "Phone", "Email", "Position", "Picture"]))
+         "Name", "Batch", "Course", "Phone", "Email", "Position", "Picture"])
  
  # Function to upload and store image
  def save_image(uploaded_file):
