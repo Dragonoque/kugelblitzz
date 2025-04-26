@@ -1,13 +1,23 @@
+from PIL import Image
 import streamlit as st
 import pandas as pd
 import os
 from io import BytesIO
+import io
+import base64
 
 st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 st.image("https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/2023/09/main_image_star-forming_region_carina_nircam_final-5mb.jpg?w=2000&h=1158&fit=crop&crop=faces%2Cfocalpoint", caption="A Kugelblitz is a theoretical, highly dense concentration of energy, specifically light or heat, that collapses into a black hole due to the warping of spacetime. It's a black hole formed not from matter, but from intensely focused energy, potentially created by a powerful laser pulse. ", use_container_width=True)
 
 # Configurations
+crop_top = 50    # pixels to crop from top
+crop_bottom = 50 # pixels to crop from bottom
 
+# Crop the image (left, top, right, bottom)
+cropped_image = image.crop((0, crop_top, width, height - crop_bottom))
+
+# Show the cropped image
+st.image(cropped_image)
 st.title("Kugelblitz")
 col1, col2, col3 = st.columns([1, 2, 1])  # Create 3 columns, middle one wider
 with col3:
