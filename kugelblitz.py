@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from io import BytesIO
+st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 def add_background():
     st.markdown(
         """
@@ -20,7 +21,7 @@ add_background()
 
 
 # Configurations
-st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
+
 st.title("Kugelblitz")
 
 # Simple password protection
