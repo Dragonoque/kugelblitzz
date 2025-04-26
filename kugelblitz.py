@@ -2,10 +2,26 @@ import streamlit as st
 import pandas as pd
 import os
 from io import BytesIO
+def add_background():
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background-image: url(https://live.staticflickr.com/65535/52211883534_f45cb76810.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+add_background()
+
 
 # Configurations
 st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
-st.title("🌌 Kugelblitz Physics Club")
+st.title("Kugelblitz")
 
 # Simple password protection
 PASSWORD = "kugelblitz123"  # <-- Change this to a secure password
