@@ -61,7 +61,9 @@ with st.sidebar:
                             "Position": position,
                             "Picture": save_image(picture)
                         }
-                        st.session_state.club_data = st.session_state.club_data.append(new_entry, ignore_index=True)
+                        new_df = pd.DataFrame([new_entry])
+st.session_state.club_data = pd.concat([st.session_state.club_data, new_df], ignore_index=True)
+
                         st.success("New entry added!")
                 else:
                     st.error("Please fill all fields and upload a picture.")
