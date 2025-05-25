@@ -82,7 +82,8 @@ vp = st.session_state.club_data[st.session_state.club_data['Position'] == "Vice 
 others = st.session_state.club_data[~st.session_state.club_data['Position'].isin(["President", "Vice President"])]
 
 # Display President
-st.header("👑 President")
+st.markdown("<h2 style='text-align:center;'> President</h2>", unsafe_allow_html=True)
+
 if not president.empty:
     for idx, member in president.iterrows():
         display_member(member)
@@ -90,7 +91,8 @@ else:
     st.info("No President added yet.")
 
 # Display Vice President
-st.header("🎖️ Vice President")
+st.markdown("<h2 style='text-align:center;'>Vice President</h2>", unsafe_allow_html=True)
+
 if not vp.empty:
     for idx, member in vp.iterrows():
         display_member(member)
@@ -98,7 +100,8 @@ else:
     st.info("No Vice President added yet.")
 
 # Display Core Team and Others
-st.header("🚀 Core Team Members")
+st.markdown("<h2 style='text-align:center;'>Core Team Members</h2>", unsafe_allow_html=True)
+
 if not others.empty:
     for idx, member in others.iterrows():
         with st.expander(member['Position'] + ": " + member['Name']):
