@@ -62,7 +62,7 @@ with st.sidebar:
                             "Picture": save_image(picture)
                         }
                         new_df = pd.DataFrame([new_entry])
-st.session_state.club_data = pd.concat([st.session_state.club_data, new_df], ignore_index=True)
+                        st.session_state.club_data = pd.concat([st.session_state.club_data, new_df], ignore_index=True)
 
                         st.success("New entry added!")
                 else:
