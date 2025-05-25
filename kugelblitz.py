@@ -10,7 +10,7 @@ st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 
 
 # Configurations
- Simple password protection
+ #Simple password protection
 PASSWORD = "kugelblitz123"  # <-- Change this to a secure password
 
 # Data storage (for simple use, in-memory; can be adapted to file/database)
