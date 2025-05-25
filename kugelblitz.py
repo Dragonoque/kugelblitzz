@@ -12,7 +12,7 @@ st.image("https://assets.science.nasa.gov/dynamicimage/assets/science/astro/univ
 # Define the crop values
 crop_top = 50    # pixels
 crop_bottom = 50 # pixels
-width, height = image.size
+
 
 # Crop the image
 cropped_image = image.crop((0, crop_top, width, height - crop_bottom))
