@@ -109,4 +109,12 @@ if not others.empty:
 else:
     st.info("No core team members added yet.")
 
+def display_member(member):
+    st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
+    st.image(BytesIO(member['Picture']), width=150)
+    st.markdown(f"### {member['Name']}", unsafe_allow_html=True)
+    st.markdown(f"📚 {member['Course']} ({member['Batch']})", unsafe_allow_html=True)
+    st.markdown(f"📞 {member['Phone']}", unsafe_allow_html=True)
+    st.markdown(f"📧 {member['Email']}", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
 
