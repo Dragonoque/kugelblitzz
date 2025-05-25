@@ -10,15 +10,7 @@ st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 
 st.image("https://assets.science.nasa.gov/dynamicimage/assets/science/astro/universe/2023/09/main_image_star-forming_region_carina_nircam_final-5mb.jpg?w=2000&h=1158&fit=crop&crop=faces%2Cfocalpoint", caption="A Kugelblitz is a theoretical, highly dense concentration of energy, specifically light or heat, that collapses into a black hole due to the warping of spacetime. It's a black hole formed not from matter, but from intensely focused energy, potentially created by a powerful laser pulse. ", use_container_width=True)
 # Define the crop values
-crop_top = 50    # pixels
-crop_bottom = 50 # pixels
 
-
-# Crop the image
-cropped_image = image.crop((0, crop_top, width, height - crop_bottom))
-
-# Show the cropped image
-st.image(cropped_image)#
 # Configurations
  #Simple password protection
 PASSWORD = "kugelblitz123"  # <-- Change this to a secure password
