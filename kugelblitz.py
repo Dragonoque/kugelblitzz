@@ -5,6 +5,8 @@ import os
 from io import BytesIO
 import io
 import base64
+from db import Session, ClubMember
+
 
 st.set_page_config(page_title="Kugelblitz Club Page", layout="wide")
 
